@@ -1,1 +1,42 @@
 yarn add express@4.15.4
+
+add server/server.js file and run server:
+
+heroku :
+
+heroku cli : 
+
+https://devcenter.heroku.com/articles/heroku-cli
+
+after install heroku cli
+check version 
+
+heroku --version
+
+next :
+heroku login
+
+after successfull login 
+
+create application using this command
+
+heroku create 'react-extensify'
+1.it set up new heroku app
+2.it adding a new git remote to local repo
+
+command:
+
+git remote     
+origin
+heroku
+
+so , we need to push code to the heroku remote repo
+
+before this we need to teach heroku how to run webpack 
+
+
+
+
+
+
+
