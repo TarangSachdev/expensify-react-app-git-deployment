@@ -1,0 +1,42 @@
+add script to the package.json
+
+
+"build:prod": "webpack -p --env production",
+
+reducse the bundle.js size
+
+now in app.js we importing css files 
+and all css files are there is bundle.js we need to seprate this in it's own style file.
+
+so when webpack run we need to 
+
+extract text webpack plugin- this is going us to allow extract some text out of bundle.js
+
+https://www.npmjs.com/package/extract-text-webpack-plugin
+
+yarn add extract-text-webpack-plugin@3.0.0
+
+
+step :1
+in webpack.config : import required plugin 
+
+const CSSExtract = new ExtractTextPlugin('styles.css');
+
+step : 2
+in module -> rules
+
+{
+            test: /\.s?css$/,
+            // use: ['style-loader', 'css-loader', 'sass-loader']
+            use: CSSExtract.extract({
+                use: ['css-loader', 'sass-loader']
+            })
+}
+
+step : 3
+
+in return object :
+
+    add this :- plugins: [CSSExtract],
+
+    
