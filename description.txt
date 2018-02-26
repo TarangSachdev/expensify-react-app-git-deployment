@@ -1,0 +1,50 @@
+
+
+share ssh key with github
+
+to check ssh key on your machine :
+ls -a ~/.ssh
+
+out-put like that
+
+.  ..  id_rsa  id_rsa.pub  known_hosts
+
+if not please follow the instruction 
+
+https://help.github.com/articles/connecting-to-github-with-ssh/
+
+-- on windows use gitbase terminal
+
+id_rsa :  private
+id_rsa.pub :  public
+
+
+eval "$(ssh-agent -s)" 
+Agent pid 3212 --process id_rsa
+
+ssh-add ~/.ssh/id_rsa
+
+after follow 
+https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
+
+after copy the clipboard add it to the setting of git hub
+
+add new ssh key and paste this to proper place
+
+
+now to test if all configuration is done:
+
+ssh -T git@github.com
+
+
+Hi TarangSachdev! You've successfully authenticated, but GitHub does not provide shell access.
+
+git remote add origin git@github.com:TarangSachdev/expensify-react-app-git-deployment.git
+
+git push -u origin master
+
+
+
+
+
+
