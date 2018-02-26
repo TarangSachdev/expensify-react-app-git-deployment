@@ -1,6 +1,5 @@
 add script to the package.json
 
-
 "build:prod": "webpack -p --env production",
 
 reducse the bundle.js size
@@ -15,7 +14,6 @@ extract text webpack plugin- this is going us to allow extract some text out of 
 https://www.npmjs.com/package/extract-text-webpack-plugin
 
 yarn add extract-text-webpack-plugin@3.0.0
-
 
 step :1
 in webpack.config : import required plugin 
@@ -36,7 +34,11 @@ in module -> rules
 step : 3
 
 in return object :
+add this :- plugins: [CSSExtract]
 
-    add this :- plugins: [CSSExtract],
+
+
+
+
 
     
